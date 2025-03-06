@@ -1,0 +1,16 @@
+NPM
+
+dependencies 
+ "date-fns": "^4.1.0"
+4. major version
+1. minor version
+0 patch verson
+"^4.1.0" means update the minor and patch but not major
+
+"4.1.0" means update only the version specified major
+
+"~4.1.0" means update only the version patch major
+
+"~4.1.0" means update only the version patch major
+
+"*" means update all the version always
