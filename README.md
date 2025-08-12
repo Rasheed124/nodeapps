@@ -20,22 +20,12 @@ A structured journey documenting my progress, skills, and resources while master
 - Working with the Node.js file system
 - Using the `http` module to create basic servers  
 
-**Resources:**
-- [Node.js Official Docs](https://nodejs.org/en/docs)
-- [The Net Ninja - Node.js Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp)
-- [W3Schools Node.js Tutorial](https://www.w3schools.com/nodejs/)
-
----
 
 ### **2️⃣ NPM & Package Management**
 - Installing and using npm packages
 - Creating `package.json`
 - Managing dependencies and scripts
 - Understanding semantic versioning
-
-**Resources:**
-- [npm Docs](https://docs.npmjs.com/)
-- [freeCodeCamp npm Guide](https://www.freecodecamp.org/news/npm-cheat-sheet/)
 
 
 ## 📌 Notes
