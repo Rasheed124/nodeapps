@@ -13,20 +13,20 @@ celebrity.on("race", (result) => {
 // celebrity.emit("race", "run");
 // celebrity.emit("race", "win");
 
-// const http = require("https");
+const { get } = require("https");
 
-// const request = http.request("https://www.google.com",  (res) => {
-//   res.on("data", (chunk) => {
-//     console.log(chunk);
-//   });
-//   res.on("end", () => {
-//     console.log("no more data");
-//   });
-// });
+const request = get("https://www.google.com", (res) => {
+  res.on("data", (chunk) => {
+    console.log(chunk);
+  });
+  res.on("end", () => {
+    console.log("no more data");
+  });
+});
 
 // makes request sent
 // request.end();
 
-// process.on("exit", (code) => {
-//   console.log("programs ends at point", code);
-// });
+process.on("exit", (code) => {
+  console.log("programs ends at point", code);
+});
