@@ -7,13 +7,18 @@ const server = http.createServer();
 
 const users = [
   {
-    id: "1",
+    id: 0,
     name: "Rasheed",
     age: 20,
   },
   {
-    id: 2,
+    id: 1,
     name: "Adeola",
+    age: 20,
+  },
+  {
+    id: 2,
+    name: "Deen",
     age: 20,
   },
   {
@@ -24,9 +29,17 @@ const users = [
 ];
 
 server.on("request", (req, res) => {
-  const params = req.url.split("/")
+  const params = req.url.split("/");
 
-  if (params[1] === "users") {
+  if (req.method === "POST" && params[1] === "users") {
+    req.on("data", (data) => {
+      const user = data.toString();
+      console.log(user);
+      users.push(JSON.parse(user));
+    });
+
+    req.pipe(res);
+  } else if (req.method === "GET" && params[1] === "users") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
     if (params.length === 3) {
@@ -35,7 +48,7 @@ server.on("request", (req, res) => {
     } else {
       res.end(JSON.stringify(users));
     }
-  } else if (params[1] === "/friends") {
+  } else if (req.method === "GET" && params[1] === "/friends") {
     res.setHeader("content-type", "text/html");
     res.write("<html>");
     res.write("<body>");
